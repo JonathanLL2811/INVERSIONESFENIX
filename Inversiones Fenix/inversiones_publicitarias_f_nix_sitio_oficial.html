@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones Publicitarias Fénix S. de R.L. | Impulsamos tu imagen al éxito</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #d9381e; /* Rojo Fénix */
+            --secondary-color: #f39c12; /* Naranja/Dorado */
+            --dark-color: #1a1a1a;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--dark-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #fff !important;
+        }
+        .navbar-brand span {
+            color: var(--secondary-color);
+        }
+        .nav-link {
+            color: #ddd !important;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('ruta_de_imagen_banner_principal.jpg') center/cover no-repeat;
+            background-color: var(--dark-color); /* Color de respaldo si no hay imagen */
+            color: white;
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+        .hero p.slogan {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 70px 0;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--dark-color);
+        }
+        .section-title::after {
+            content: '';
+            width: 70px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Cards & Products */
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .product-img {
+            height: 220px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            background-color: #eee;
+        }
+        .price-badge {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        .stock-badge {
+            background-color: #27ae60;
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        /* Accordion FAQ */
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(217, 56, 30, 0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Steps Timeline */
+        .step-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: #bbb;
+            padding: 50px 0 20px 0;
+        }
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        footer a:hover {
+            color: var(--secondary-color);
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Modal / Policies */
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        .nav-pills .nav-link {
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <i class="fa-solid fa-fire text-warning me-2"></i>FENIX <span>INVERSIONES PUBLICITARIAS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">Preguntas Frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pedido">Procesos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formulario">Alta Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#politicas">Políticas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="inicio" class="hero">
+        <div class="container">
+            <h1 class="display-4">Inversiones Publicitarias Fénix S. de R.L.</h1>
+            <p class="slogan">“Impulsamos tu imagen al éxito”</p>
+            <p class="lead mb-4">Soluciones integrales de publicidad, rotulación y diseño gráfico en Honduras.</p>
+            <a href="#catalogo" class="btn btn-warning btn-lg me-2 fw-bold text-dark">Ver Catálogo</a>
+            <a href="#formulario" class="btn btn-outline-light btn-lg">Hacer Pedido</a>
+        </div>
+    </header>
+
+    <!-- NOSOTROS (PROPUESTA DE VALOR) -->
+    <section id="nosotros" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Nuestra Empresa</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 border-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-bullseye text-danger fa-2x me-3"></i>
+                            <h3 class="h4 mb-0">Misión</h3>
+                        </div>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Brindar soluciones publicitarias integrales y creativas.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Impulsar la visibilidad de empresas y emprendedores mediante rotulación, diseño gráfico y estrategias de comunicación.</li>
+                            <li><i class="fa-solid fa-check text-warning me-2"></i>Ofrecer productos y servicios de calidad que fortalezcan la identidad de marca de los clientes.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4 border-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-eye text-warning fa-2x me-3"></i>
+                            <h3 class="h4 mb-0">Visión</h3>
+                        </div>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i>Ser reconocida como la empresa líder en publicidad y rotulación en Honduras.</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i>Consolidarse como referente en innovación, creatividad y excelencia en servicio.</li>
+                            <li><i class="fa-solid fa-check text-danger me-2"></i>Expandir su presencia en el mercado nacional con estándares internacionales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section id="catalogo">
+        <div class="container">
+            <h2 class="text-center section-title">Catálogo de Productos y Servicios</h2>
+            <p class="text-center text-muted mb-5">Ofrecemos soluciones personalizadas para la imagen de tu negocio.</p>
+            
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <!-- AQUÍ COLOCAS LA RUTA DE TU IMAGEN 1 -->
+                        <img src="Baner con portabanner.jpeg">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="price-badge">L. 1,500.00</span>
+                                <span class="stock-badge"><i class="fa-solid fa-boxes-stacked me-1"></i>Bajo Pedido</span>
+                            </div>
+                            <h5 class="card-title fw-bold">1. Banner con Portabanner</h5>
+                            <p class="card-text text-muted">30X70.</p>
+                            <hr>
+                            <h6 class="fw-bold">Características:</h6>
+                            <ul class="small text-muted ps-3">
+                                <li>Material: Acrílico.</li>
+                              
+                                <li>Resistente a la intemperie (sol y lluvia).</li>
+                                <li>Diseño e instalación personalizada incluida.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <!-- AQUÍ COLOCAS LA RUTA DE TU IMAGEN 2 -->
+                        <img src="letras acrilico.jpeg">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="price-badge">L. 15,000.00 / m²</span>
+                                <span class="stock-badge"><i class="fa-solid fa-check me-1"></i>En Stock</span>
+                            </div>
+                            <h5 class="card-title fw-bold">2. Letras Acrilico</h5>
+                            <p class="card-text text-muted">Impresión digital a gran formato en alta resolución para promociones y branding exterior.</p>
+                            <hr>
+                            <h6 class="fw-bold">Características:</h6>
+                            <ul class="small text-muted ps-3">
+                             
+                                <li>Tintas con protección UV contra la decoloración.</li>
+                                <li>Incluye ojalillos metálicos o sellado térmico.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <!-- AQUÍ COLOCAS LA RUTA DE TU IMAGEN 3 -->
+                        <img src="Roll Up con bolsa.jpeg">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="price-badge">L. 1,750.00</span>
+                                <span class="stock-badge"><i class="fa-solid fa-boxes-stacked me-1"></i>Bajo Cita</span>
+                            </div>
+                            <h5 class="card-title fw-bold">3. Roll Up con bolsa</h5>
+                            <p class="card-text text-muted">Transforma la flota de vehículos de tu empresa en publicidad móvil continua.</p>
+                            <hr>
+                            <h6 class="fw-bold">Características:</h6>
+                            <ul class="small text-muted ps-3">
+                                <li>30x70.</li>
+                                  <li>Resistente a la intemperie (sol y lluvia).</li>
+                                <li>Diseño e instalación personalizada incluida.</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <!-- AQUÍ COLOCAS LA RUTA DE TU IMAGEN 4 -->
+                        <img src="Tend card Pvc.jpeg">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="price-badge">L. 280.00</span>
+                                <span class="stock-badge"><i class="fa-solid fa-check me-1"></i>En Stock</span>
+                            </div>
+                            <h5 class="card-title fw-bold">4. Tend Card en PVC tamaño carta</h5>
+                            <p class="card-text text-muted">Estructuras ligeras y desarmables para ferias, exposiciones y puntos de venta.</p>
+                            <hr>
+                            <h6 class="fw-bold">Características:</h6>
+                            <ul class="small text-muted ps-3">
+                                <li>Papel glaseé de 300g con laminado mate o brillante.</li>
+                                <li>Impresión offset / digital full color ambos lados.</li>
+                                <li>Cortes especiales, esquinas redondeadas o barniz UV.</li>
+                                <li>Diseño gráfico adaptado a tus lineamientos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 product-card">
+                        <!-- AQUÍ COLOCAS LA RUTA DE TU IMAGEN 5 -->
+                        <img src="Ten Card Acrilico.jpeg">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="price-badge">L. 1,800.00 / Cien</span>
+                                <span class="stock-badge"><i class="fa-solid fa-check me-1"></i>Por pedido</span>
+                            </div>
+                            <h5 class="card-title fw-bold">5. Tend Card en Acrilico</h5>
+                            <p class="card-text text-muted">12X18.</p>
+                            <hr>
+                            <h6 class="fw-bold">Características:</h6>
+                            <ul class="small text-muted ps-3">
+                              
+
+                                <li>Estructura de aluminio y fibra de vidrio ligera.</li>
+                                <li>Incluye bolso de transporte reforzado.</li>
+                                <li>Lona impreso fotográfico intercambiable.</li>
+                                <li>Fácil armado en menos de 2 minutos.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ - 10 PREGUNTAS) -->
+    <section id="faq" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Preguntas Frecuentes (FAQ)</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    1. ¿Dónde están ubicados y cuál es el cobertura de atención?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nuestra oficina central se encuentra en Honduras. Brindamos servicios de diseño e impresión a nivel nacional y realizamos instalaciones de rotulación en las principales ciudades del país.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    2. ¿Incluyen el servicio de diseño gráfico en los productos?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí. Contamos con un equipo de diseñadores. La adaptación del arte para impresión básica va incluida en el costo. Si requiere el desarrollo de un concepto desde cero o creación de marca, se cotizará como un servicio adicional de diseño.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    3. ¿Cuáles son los tiempos promedio de entrega de los trabajos?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Impresiones en banner y vinil se entregan de 24 a 48 horas. Rótulos 3D, cajas de luz y branding vehicular toman entre 3 a 7 días hábiles según la magnitud del proyecto.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    4. ¿En qué formato debo enviar los archivos para impresión?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Aceptamos formatos vectoriales en PDF, Illustrator (.AI), CorelDraw (.CDR) o imágenes en alta resolución (.JPG / .PNG a 300 dpi) convertidos a curvas o fuentes incrustadas.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    5. ¿Cuáles son las formas de pago aceptadas?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Aceptamos transferencias bancarias locales, depósitos, pagos con tarjeta de crédito/débito y pagos en efectivo en nuestras oficinas.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                    6. ¿Cómo solicitan el anticipo o método de facturación?
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Para iniciar cualquier trabajo de producción requerimos el 50% de anticipo y el 50% restante al momento de la entrega o finalización de la instalación.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 7 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                    7. ¿Realizan instalaciones fuera de la ciudad?
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, realizamos instalaciones en cualquier departamento de Honduras. En estos casos, se incluye una partida adicional en la cotización correspondiente a viáticos y movilización técnica.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 8 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                    8. ¿Qué garantía ofrecen los rótulos para exteriores?
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Nuestros rótulos metálicos y cajas de luz cuentan con 1 año de garantía sobre defectos de fabricación y falla del sistema eléctrico/LED.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 9 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                    9. ¿Se realizan muestras físicas antes de la producción masiva?
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, previa autorización del pedido realizamos pruebas de color digitales y, en caso de grandes volúmenes, una muestra impresa a escala o real para aprobación del cliente.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 10 -->
+                        <div class="accordion-item mb-2 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                    10. ¿Ofrecen precios especiales por compras corporativas o al por mayor?
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Contamos con escalas de precios con descuentos especiales para agencias de publicidad, revendedores y pedidos corporativos de alto volumen.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESOS DE PEDIDO Y ENVÍO -->
+    <section id="pedido">
+        <div class="container">
+            <h2 class="text-center section-title">Procesos Operativos</h2>
+            
+            <div class="row g-5 mt-2">
+                <!-- Proceso de Pedido -->
+                <div class="col-md-6">
+                    <h3 class="h4 mb-4 text-danger fw-bold"><i class="fa-solid fa-cart-shopping me-2"></i>Pasos del Proceso de Pedido</h3>
+                    
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">01</span>
+                            <h5 class="mb-0 fw-bold">Solicitud y Cotización</h5>
+                        </div>
+                        <p class="text-muted small mb-0">El cliente envía su requerimiento o completa el formulario de alta adjuntando las especificaciones e idea/diseño deseado.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">02</span>
+                            <h5 class="mb-0 fw-bold">Aprobación de Arte y Presupuesto</h5>
+                        </div>
+                        <p class="text-muted small mb-0">El equipo técnico de Fénix envía el montaje digital (render) y el presupuesto. El cliente revisa y aprueba el diseño final.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">03</span>
+                            <h5 class="mb-0 fw-bold">Anticipo y Producción</h5>
+                        </div>
+                        <p class="text-muted small mb-0">Se realiza el pago del 50% de anticipo. La orden pasa formalmente al taller o área de impresión y ensamblaje.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">04</span>
+                            <h5 class="mb-0 fw-bold">Control de Calidad y Cierre</h5>
+                        </div>
+                        <p class="text-muted small mb-0">Revisión de acabados. Se notifica al cliente que su pedido está listo para retiro, envío o instalación.</p>
+                    </div>
+                </div>
+
+                <!-- Proceso de Envío -->
+                <div class="col-md-6">
+                    <h3 class="h4 mb-4 text-warning fw-bold"><i class="fa-solid fa-truck-fast me-2"></i>Pasos del Proceso de Envío</h3>
+                    
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">01</span>
+                            <h5 class="mb-0 fw-bold">Empaque Especializado</h5>
+                        </div>
+                        <p class="text-muted small mb-0">El producto se embala con protección plástica de burbujas, cartón o guías de madera según la fragilidad del rótulo o material.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">02</span>
+                            <h5 class="mb-0 fw-bold">Asignación de Logística</h5>
+                        </div>
+                        <p class="text-muted small mb-0">Se define si la entrega se efectúa mediante transporte propio de Fénix (con instalación) o vía empresa de encomienda nacional.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">03</span>
+                            <h5 class="mb-0 fw-bold">Emisión de Guía de Rastreo</h5>
+                        </div>
+                        <p class="text-muted small mb-0">Se proporciona al cliente la fotografía del paquete listo y su respectivo número de guía o confirmación de ruta de entrega.</p>
+                    </div>
+
+                    <div class="step-box">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="step-number me-3">04</span>
+                            <h5 class="mb-0 fw-bold">Recepción y Conformidad</h5>
+                        </div>
+                        <p class="text-muted small mb-0">Entrega del paquete al cliente final o culminación del montaje en sitio. Firma de acta de recepción e inspección final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE ALTA DEL CLIENTE Y PEDIDO -->
+    <section id="formulario" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Formulario de Alta de Cliente y Pedido</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <form id="orderForm">
+                            <h5 class="text-danger mb-3 border-bottom pb-2"><i class="fa-solid fa-id-card me-2"></i>1. Datos del Cliente / Empresa</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre Completo / Razón Social *</label>
+                                    <input type="text" class="form-control" required placeholder="Ej: Empresa S.A.">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">RTN / Identificación *</label>
+                                    <input type="text" class="form-control" required placeholder="0801199000000">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Teléfono de Contacto *</label>
+                                    <input type="tel" class="form-control" required placeholder="+504 9999-9999">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Correo Electrónico *</label>
+                                    <input type="email" class="form-control" required placeholder="cliente@correo.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Dirección Física / Entrega *</label>
+                                    <input type="text" class="form-control" required placeholder="Ciudad, Colonia, Calle, Num. Local">
+                                </div>
+                            </div>
+
+                            <h5 class="text-danger mb-3 mt-4 border-bottom pb-2"><i class="fa-solid fa-box-open me-2"></i>2. Detalles del Pedido</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Producto / Servicio de Interés *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Seleccione una opción...</option>
+                                        <option>1. Rotulación 3D y Cajas de Luz</option>
+                                        <option>2. Banners y Viniles Impresos</option>
+                                        <option>3. Branding y Rotulación Vehicular</option>
+                                        <option>4. Stand Portátiles (X-Banner / Roll-Up)</option>
+                                        <option>5. Material POP y Papelería Corporativa</option>
+                                        <option>Otro servicio personalizado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Cantidad Requerida *</label>
+                                    <input type="number" class="form-control" min="1" value="1" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Medidas o Especificaciones Técnicas</label>
+                                    <textarea class="form-control" rows="3" placeholder="Indique medidas aproximadas (Ancho x Alto), colores, tipo de acabado..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                <label class="form-check-label small text-muted" for="termsCheck">
+                                    Acepto las <a href="#politicas">políticas de garantía, envío y privacidad</a> de Inversiones Publicitarias Fénix.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning w-100 fw-bold mt-4 py-2">
+                                <i class="fa-solid fa-paper-plane me-2"></i> Enviar Alta y Solicitud de Pedido
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLÍTICAS GENERALES (CONDICIONES DE LA EMPRESA) -->
+    <section id="politicas">
+        <div class="container">
+            <h2 class="text-center section-title">Políticas y Condiciones Generales</h2>
+            
+            <div class="row mt-4">
+                <div class="col-md-4 mb-3">
+                    <div class="nav flex-column nav-pills me-3 shadow-sm bg-white p-3 rounded" id="v-pills-tab" role="tablist">
+                        <button class="nav-link active text-start" id="tab-envio" data-bs-toggle="pill" data-bs-target="#pills-envio" type="button"><i class="fa-solid fa-truck me-2"></i> Envío de Productos</button>
+                        <button class="nav-link text-start" id="tab-devolucion" data-bs-toggle="pill" data-bs-target="#pills-devolucion" type="button"><i class="fa-solid fa-rotate-left me-2"></i> Devolución y Cambio</button>
+                        <button class="nav-link text-start" id="tab-garantia" data-bs-toggle="pill" data-bs-target="#pills-garantia" type="button"><i class="fa-solid fa-shield-halved me-2"></i> Garantía</button>
+                        <button class="nav-link text-start" id="tab-seguridad" data-bs-toggle="pill" data-bs-target="#pills-seguridad" type="button"><i class="fa-solid fa-lock me-2"></i> Seguridad</button>
+                        <button class="nav-link text-start" id="tab-privacidad" data-bs-toggle="pill" data-bs-target="#pills-privacidad" type="button"><i class="fa-solid fa-user-shield me-2"></i> Privacidad</button>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content bg-white p-4 rounded shadow-sm" id="v-pills-tabContent">
+                        
+                        <!-- Envío -->
+                        <div class="tab-pane fade show active" id="pills-envio">
+                            <h4 class="text-danger fw-bold border-bottom pb-2">Política de Envío de Productos</h4>
+                            <p class="text-muted">En <strong>Inversiones Publicitarias Fénix S. de R.L.</strong> coordinamos la entrega e instalación de nuestros productos a nivel nacional.</p>
+                            <ul class="text-muted">
+                                <li><strong>Cobertura:</strong> Cobertura directa en zonas metropolitanas e instaladores autorizados para el resto del país.</li>
+                                <li><strong>Costos de envío:</strong> El envío es gratuito en pedidos superiores a determinado volumen contratado o especificado en cotización. Para envíos menores se aplicará tarifa de transporte regular.</li>
+                                <li><strong>Tiempos de entrega:</strong> Inician a partir del momento en que el cliente aprueba el arte final y realiza el pago de anticipo correspondiente.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Devolución -->
+                        <div class="tab-pane fade" id="pills-devolucion">
+                            <h4 class="text-danger fw-bold border-bottom pb-2">Política de Devolución y Cambio</h4>
+                            <p class="text-muted">Debido a que nuestros productos son personalizados y fabricados bajo especificaciones únicas:</p>
+                            <ul class="text-muted">
+                                <li><strong>Cancelaciones:</strong> Solo se aceptarán cancelaciones antes de que el trabajo haya sido ingresado a la etapa de producción/corte/impresión.</li>
+                                <li><strong>Errores de impresión o fabricación:</strong> Si el producto entregado difiere del boceto digital aprobado formalmente por el cliente, Fénix asumirá la reposición o corrección del producto sin costo adicional.</li>
+                                <li><strong>Errores del cliente:</strong> No aplican devoluciones por faltas ortográficas o errores de información que hayan sido aprobados previamente por el cliente en la muestra final.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Garantía -->
+                        <div class="tab-pane fade" id="pills-garantia">
+                            <h4 class="text-danger fw-bold border-bottom pb-2">Política de Garantía</h4>
+                            <p class="text-muted">Respaldamos la calidad de nuestros materiales y mano de obra:</p>
+                            <ul class="text-muted">
+                                <li><strong>Estructuras y Letreros 3D:</strong> Cobertura de 12 meses en iluminación LED y fuentes de poder por fallas mecánicas de fábrica.</li>
+                                <li><strong>Impresión Digital:</strong> Garantía de resistencia del color frente a factores climáticos (UV) de hasta 12 meses según el tipo de material contratado.</li>
+                                <li><strong>Exclusiones:</strong> La garantía queda anulada por daños derivados de vandalismo, desastres naturales, manipulaciones de terceros ajenos a la empresa o variaciones extremas de voltaje eléctrico.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Seguridad -->
+                        <div class="tab-pane fade" id="pills-seguridad">
+                            <h4 class="text-danger fw-bold border-bottom pb-2">Política de Seguridad</h4>
+                            <p class="text-muted">Garantizamos la protección integral en todas las transacciones:</p>
+                            <ul class="text-muted">
+                                <li><strong>Operaciones de Pago:</strong> Todas las transacciones electrónicas se procesan mediante plataformas bancarias seguras con encriptación SSL.</li>
+                                <li><strong>Seguridad Operativa en Sitio:</strong> Contamos con pólizas y personal capacitado bajo normativas de salud y seguridad ocupacional para instalaciones en alturas y de alto riesgo.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Privacidad -->
+                        <div class="tab-pane fade" id="pills-privacidad">
+                            <h4 class="text-danger fw-bold border-bottom pb-2">Política de Privacidad</h4>
+                            <p class="text-muted">Protegemos la información de todos nuestros clientes:</p>
+                            <ul class="text-muted">
+                                <li><strong>Uso de datos:</strong> Toda la información recopilada en este sitio (RTN, teléfono, correo) se utiliza exclusivamente para la facturación, elaboración de pedidos y entrega de servicios.</li>
+                                <li><strong>Propiedad Intelectual:</strong> Los logotipos e información corporativa suministrados por el cliente no serán compartidos ni revendidos a terceros bajo ninguna circunstancia.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA DEL SITIO -->
+    <section class="bg-dark text-white py-5">
+        <div class="container">
+            <h3 class="text-center text-warning mb-4"><i class="fa-solid fa-sitemap me-2"></i>Mapa del Sitio</h3>
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 col-6 mb-3">
+                    <h6 class="text-danger fw-bold">Principal</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#inicio" class="text-white-50">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-white-50">Propuesta de Valor</a></li>
+                        <li><a href="#nosotros" class="text-white-50">Misión y Visión</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h6 class="text-danger fw-bold">Catálogo</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#catalogo" class="text-white-50">Rotulación 3D</a></li>
+                        <li><a href="#catalogo" class="text-white-50">Banners y Viniles</a></li>
+                        <li><a href="#catalogo" class="text-white-50">Branding Vehicular</a></li>
+                        <li><a href="#catalogo" class="text-white-50">Stands Portátiles</a></li>
+                        <li><a href="#catalogo" class="text-white-50">Material POP</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h6 class="text-danger fw-bold">Atención al Cliente</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#faq" class="text-white-50">Preguntas Frecuentes</a></li>
+                        <li><a href="#pedido" class="text-white-50">Proceso de Pedido</a></li>
+                        <li><a href="#pedido" class="text-white-50">Proceso de Envío</a></li>
+                        <li><a href="#formulario" class="text-white-50">Alta de Cliente</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h6 class="text-danger fw-bold">Legal y Políticas</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#politicas" class="text-white-50">Política de Envío</a></li>
+                        <li><a href="#politicas" class="text-white-50">Devolución y Cambio</a></li>
+                        <li><a href="#politicas" class="text-white-50">Garantía de Fábrica</a></li>
+                        <li><a href="#politicas" class="text-white-50">Seguridad y Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold"><i class="fa-solid fa-fire text-warning me-2"></i>Inversiones Publicitarias Fénix S. de R.L.</h5>
+                    <p class="small text-muted">Empresa líder en Honduras dedicada a soluciones integrales de publicidad, rotulación comercial, diseño gráfico e impresión digital de gran formato.</p>
+                    <p class="small text-warning fst-italic">“Impulsamos tu imagen al éxito”</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">Contacto Directo</h5>
+                    <p class="small mb-1"><i class="fa-solid fa-location-dot text-danger me-2"></i> Honduras, C.A.</p>
+                    <p class="small mb-1"><i class="fa-solid fa-envelope text-danger me-2"></i> contacto@publicitariasfenix.hn</p>
+                    <p class="small mb-1"><i class="fa-solid fa-phone text-danger me-2"></i> +504 9999-9999 / +504 2222-0000</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">Horario de Atención</h5>
+                    <p class="small mb-1">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                    <p class="small mb-3">Sábados: 8:00 AM - 12:00 PM</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center footer-bottom">
+                <p class="mb-0">&copy; 2026 Inversiones Publicitarias Fénix S. de R.L. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Manejo básico de envío de formulario para demostración
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Solicitud de pedido enviada con éxito! Nos pondremos en contacto con usted a la brevedad.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
